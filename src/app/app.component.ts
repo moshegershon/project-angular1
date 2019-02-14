@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { longStackSupport } from 'q';
+import { AuthService } from './servises/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'InClassAngular';
+
+  constructor(private authService: AuthService) { }
+
+
+  logout() {
+    this.authService.logout();
+  }
 }
