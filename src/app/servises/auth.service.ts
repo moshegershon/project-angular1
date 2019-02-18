@@ -21,7 +21,7 @@ export class AuthService {
           this._islogged.next(true)
           return res;
         })
-      )
+      );
     }
     else {
       return throwError('user or password incorrect');
@@ -37,12 +37,12 @@ export class AuthService {
   private deletToken() {
     return window.localStorage.removeItem(environment.tokenKey);
   }
-  isLogged(): Observable<boolean> {
-    return this._islogged
-  }
   logout() {
     this._islogged.next(false)
     this.deletToken();
+  }
+  isLogged(): Observable <boolean> {
+    return this._islogged
   }
 }
 

@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-  register(f){
+  register(){
     console.log(this.userModel)
   }
 

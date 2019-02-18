@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  tokenKey:'token'
+  serverUrl:'http://localhost:3000/',
+  tokenKey:'token',
+  currency:'NIS'
 };
 
 /*
